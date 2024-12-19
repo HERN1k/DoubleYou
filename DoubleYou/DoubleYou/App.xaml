@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="DoubleYou.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:local="using:DoubleYou">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <SolidColorBrush x:Key="MainAcrylicBrush" Color="#25000000" />
+
+                    <LinearGradientBrush x:Key="MainLinearGradient" StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#feba67" Offset="0" />
+                        <GradientStop Color="#fd6e70" Offset="1" />
+                    </LinearGradientBrush>
+
+                    <SolidColorBrush x:Key="SelectionIndicatorBrush" Color="#fe956e" />
+
+                    <SolidColorBrush x:Key="HiddenBrush" Color="#50000000" />
+
+                    <SolidColorBrush x:Key="WordItemBrush" Color="#fe996b" />
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="HighContrast">
+                    <SolidColorBrush x:Key="MainAcrylicBrush" Color="#50FFFFFF" />
+
+                    <LinearGradientBrush x:Key="MainLinearGradient" StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#feba67" Offset="0" />
+                        <GradientStop Color="#fd6e70" Offset="1" />
+                    </LinearGradientBrush>
+
+                    <SolidColorBrush x:Key="SelectionIndicatorBrush" Color="#fe956e" />
+
+                    <SolidColorBrush x:Key="HiddenBrush" Color="#50000000" />
+
+                    <SolidColorBrush x:Key="WordItemBrush" Color="#fe996b" />
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="MainAcrylicBrush" Color="#50FFFFFF" />
+
+                    <LinearGradientBrush x:Key="MainLinearGradient" StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#cb654a" Offset="0" />
+                        <GradientStop Color="#182468" Offset="1" />
+                    </LinearGradientBrush>
+
+                    <SolidColorBrush x:Key="SelectionIndicatorBrush" Color="#794758" />
+
+                    <SolidColorBrush x:Key="HiddenBrush" Color="#75cacaca" />
+
+                    <SolidColorBrush x:Key="WordItemBrush" Color="#7e4957" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <FontFamily x:Key="MontserratItalic">ms-appx:///Resources/Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf#Montserrat</FontFamily>
+            <FontFamily x:Key="Montserrat">ms-appx:///Resources/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf#Montserrat</FontFamily>
+
+            <SolidColorBrush x:Key="NavigationViewContentGridBorderBrush" Color="Transparent" />
+            <SolidColorBrush x:Key="NavigationViewContentBackground" Color="Transparent" />
+            <SolidColorBrush x:Key="NavigationViewSelectionIndicatorForeground" Color="#fe956e" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

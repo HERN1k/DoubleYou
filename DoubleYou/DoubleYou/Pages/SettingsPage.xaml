@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="DoubleYou.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DoubleYou.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <Style TargetType="StackPanel" x:Key="MainContainer">
+                <Setter Property="Orientation" Value="Vertical" />
+                <Setter Property="Margin" Value="100,0,0,0" />
+                <Setter Property="Opacity" Value="0" />
+            </Style>
+            <Style TargetType="TextBlock" x:Key="Title">
+                <Setter Property="FontSize" Value="36" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat}" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Margin" Value="0,0,0,40" />
+                <Setter Property="Foreground" Value="{ThemeResource MainLinearGradient}" />
+            </Style>
+            <Style TargetType="StackPanel" x:Key="PropertyContainer">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Left" />
+                <Setter Property="Margin" Value="0,0,0,20" />
+            </Style>
+            <Style TargetType="TextBlock" x:Key="PropertyText">
+                <Setter Property="Height" Value="40" />
+                <Setter Property="Margin" Value="0,0,15,0" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="LineHeight" Value="40" />
+                <Setter Property="Padding" Value="0,10" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat}" />
+            </Style>
+            <Style TargetType="ComboBox" x:Key="Select">
+                <Setter Property="Height" Value="40" />
+                <Setter Property="CornerRadius" Value="6" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat}" />
+            </Style>
+            <Style TargetType="TextBlock" x:Key="Version">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Opacity" Value="0.5" />
+                <Setter Property="Margin" Value="0,50,0,0" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat}" />
+            </Style>
+            <Style TargetType="Button" x:Key="ButtonStyle">
+                <Setter Property="Height" Value="40" />
+                <Setter Property="CornerRadius" Value="6" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat}" />
+            </Style>
+
+            <Duration x:Key="FadeDuration">0:0:0.5</Duration>
+            <Storyboard x:Key="StartAnimation" AutoReverse="False">
+                <DoubleAnimation Storyboard.TargetName="MainStack"
+                     Storyboard.TargetProperty="Opacity"
+                     From="0"
+                     To="1"
+                     Duration="{StaticResource FadeDuration}" />
+            </Storyboard>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer 
+            Grid.Row="0"
+            Grid.Column="0"
+            VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="MainStack" Style="{StaticResource MainContainer}">
+
+                <TextBlock x:Name="SettingsTitle" Style="{StaticResource Title}" />
+
+                <StackPanel Style="{StaticResource PropertyContainer}">
+                    <TextBlock x:Name="ApplicationLanguage" Style="{StaticResource PropertyText}" />
+                    <ComboBox x:Name="LanguageSelect" Style="{StaticResource Select}" />
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource PropertyContainer}">
+                    <TextBlock x:Name="TranslationLanguage" Style="{StaticResource PropertyText}" />
+                    <ComboBox x:Name="TranslationLanguageSelect" Style="{StaticResource Select}" />
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource PropertyContainer}">
+                    <TextBlock x:Name="FavoriteTopic" Style="{StaticResource PropertyText}" />
+                    <ComboBox x:Name="FavoriteTopicSelect" Style="{StaticResource Select}" />
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource PropertyContainer}">
+                    <TextBlock x:Name="DataBackup" Style="{StaticResource PropertyText}" />
+                    <Button x:Name="DataBackupButton" Style="{StaticResource ButtonStyle}" />
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource PropertyContainer}">
+                    <TextBlock x:Name="FactoryReset" Style="{StaticResource PropertyText}" />
+                    <Button x:Name="FactoryResetButton" Style="{StaticResource ButtonStyle}" />
+                </StackPanel>
+
+                <TextBlock x:Name="VersionText" Style="{StaticResource Version}" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
