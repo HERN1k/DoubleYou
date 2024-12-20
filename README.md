@@ -14,9 +14,9 @@
 <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" height="25px" />
 </p>
 
-### Description of the application
+### **[Double You](https://apps.microsoft.com/detail/9N2CC7VK03X6)** - Words for everyone
 
-**[Double You](https://apps.microsoft.com/detail/9N2CC7VK03X6)** is an educational app designed to help users expand their English vocabulary. 
+This is an educational app designed to help users expand their English vocabulary. is an educational app designed to help users expand their English vocabulary. 
 The app offers commonly used and essential words for learning, complete with translations. 
 It allows users to track their learning progress, make backups, and customize preferences 
 based on various themes to provide tailored word suggestions
