@@ -7,7 +7,7 @@
 <p>
 <img alt=".Net" src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" height="25px" />
 
-<img alt="WinUI3" src="https://img.shields.io/badge/WinUI 3-blue.svg?style=for-the-badge&logo=cssdesignawards&logoColor=white" height="25px" />
+<img alt="WinUI3" src="https://img.shields.io/badge/WinUI 3-purple.svg?style=for-the-badge&logo=cssdesignawards&logoColor=white" height="25px" />
 
 <img alt="GoogleTranslate" src="https://img.shields.io/badge/Google-blue.svg?style=for-the-badge&logo=googletranslate&logoColor=white" height="25px" />
 
