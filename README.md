@@ -40,19 +40,19 @@ based on various themes to provide tailored word suggestions
 
 ## 💻 System requirements
 
-- **Available on:** PC, Surface Hub
-- **OS:** Windows 10 version 17763.0 or higher
-- **Mouse:** Integrated Mouse
-- **Memory:** 100 MB
-- **Video Memory:** 0.5 GB
+- **Available on:** `PC, Surface Hub`
+- **OS:** `Windows 10 version 17763.0 or higher`
+- **Mouse:** `Integrated Mouse`
+- **Memory:** `100 MB`
+- **Video Memory:** `0.5 GB`
 
 ## ℹ️ Additional information
 
-- **Category:** Education
-- **Supported languages:** English, Ukrainian
-- **First release date:** 12/20/2024
-- **Approximate size:** 135.0 MB
-- **Version:** 1.0.1.0
+- **Category:** `Education`
+- **Supported languages:** `English, Ukrainian`
+- **First release date:** `12/20/2024`
+- **Approximate size:** `135.0 MB`
+- **Version:** `1.0.1.0`
 
 
 
