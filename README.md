@@ -54,7 +54,9 @@ based on various themes to provide tailored word suggestions
 - **Approximate size:** `135.0 MB`
 - **Version:** `1.0.1.0`
 
+## 🤩 Show your support
 
+<p>Please give a ⭐ if you like this repository!</p>
 
 
 
