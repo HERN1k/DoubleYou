@@ -263,14 +263,19 @@ namespace DoubleYou.Pages
         {
             if (!m_sureWantResetDB)
             {
-                this.ShowAlert(
-                    m_localization.GetString(Constants.WARNING_KEY),
-                    m_localization.GetString(Constants.ARE_YOU_SURE_YOU_WANT_RESET_ALL_SETTINGS_KEY),
-                    InfoBarSeverity.Warning);
+                ShowAlertForResetDB();
 
                 m_sureWantResetDB = !m_sureWantResetDB;
 
                 return;
+            }
+
+            if (sender is Button button)
+            {
+                if (button.Tag is string tag && tag.Equals(Constants.RESET_KEY, StringComparison.OrdinalIgnoreCase))
+                {
+                    button.Click -= OnFactoryResetButtonClick;
+                }
             }
 
             await MigrationsExtension.ClearDB(m_serviceProvider);
@@ -548,6 +553,25 @@ namespace DoubleYou.Pages
             {
                 ShowException(ex);
             }
+        }
+        #endregion
+
+        #region Auxiliary methods
+        private void ShowAlertForResetDB()
+        {
+            var button = new Button
+            {
+                Content = m_localization.GetString(Constants.RESET_KEY),
+                Tag = Constants.RESET_KEY
+            };
+
+            button.Click += OnFactoryResetButtonClick;
+
+            this.ShowAlertWithButton(
+                title: m_localization.GetString(Constants.WARNING_KEY),
+                message: m_localization.GetString(Constants.ARE_YOU_SURE_YOU_WANT_RESET_ALL_SETTINGS_KEY),
+                button: button,
+                severity: InfoBarSeverity.Warning);
         }
         #endregion
 

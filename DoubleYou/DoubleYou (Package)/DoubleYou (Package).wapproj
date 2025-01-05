@@ -29,16 +29,16 @@
       <Platform>ARM64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-    <ItemGroup>
-        <TrimmerRootAssembly Include="Microsoft.EntityFrameworkCore.Relational" />
-        <TrimmerRootAssembly Include="Microsoft.EntityFrameworkCore.Sqlite" />
-        <TrimmerRootAssembly Include="Microsoft.EntityFrameworkCore" />
-        <TrimmerRootAssembly Include="Microsoft.Web.WebView2.Core.Projection" />
-        <TrimmerRootAssembly Include="Microsoft.Windows.SDK.NET" />
-        <TrimmerRootAssembly Include="WinRT.Runtime" />
-        <TrimmerRootAssembly Include="Newtonsoft.Json" />
-        <TrimmerRootAssembly Include="System.Configuration.ConfigurationManager" />
-    </ItemGroup>
+  <ItemGroup>
+    <TrimmerRootAssembly Include="Microsoft.EntityFrameworkCore.Relational" />
+    <TrimmerRootAssembly Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    <TrimmerRootAssembly Include="Microsoft.EntityFrameworkCore" />
+    <TrimmerRootAssembly Include="Microsoft.Web.WebView2.Core.Projection" />
+    <TrimmerRootAssembly Include="Microsoft.Windows.SDK.NET" />
+    <TrimmerRootAssembly Include="WinRT.Runtime" />
+    <TrimmerRootAssembly Include="Newtonsoft.Json" />
+    <TrimmerRootAssembly Include="System.Configuration.ConfigurationManager" />
+  </ItemGroup>
   <PropertyGroup>
     <WapProjPath Condition="'$(WapProjPath)'==''">$(MSBuildExtensionsPath)\Microsoft\DesktopBridge\</WapProjPath>
     <PathToXAMLWinRTImplementations>DoubleYou\</PathToXAMLWinRTImplementations>
@@ -51,22 +51,20 @@
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <AssetTargetFallback>net8.0-windows$(TargetPlatformVersion);$(AssetTargetFallback)</AssetTargetFallback>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <AppxPackageSigningEnabled>False</AppxPackageSigningEnabled>
     <EntryPointProjectUniqueName>..\DoubleYou\DoubleYou.csproj</EntryPointProjectUniqueName>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
-    <AppxBundlePlatforms>x86|x64|arm64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-    <PackageCertificateThumbprint>23750269DBE266ECD75E1E1A3059CD800A17ED07</PackageCertificateThumbprint>
+    <!--<PackageCertificateThumbprint>23750269DBE266ECD75E1E1A3059CD800A17ED07</PackageCertificateThumbprint>-->
     <NoWarn>NU1701</NoWarn>
     <GenerateTemporaryStoreCertificate>True</GenerateTemporaryStoreCertificate>
-    <!--<PublishTrimmed>false</PublishTrimmed>
-    <TrimmerSingleWarn>false</TrimmerSingleWarn>-->
     <TrimMode>partial</TrimMode>
     <SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
-</PropertyGroup>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <AppxBundle>Always</AppxBundle>
   </PropertyGroup>
@@ -91,7 +89,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitignore" />
     <Content Include="Images\LargeTile.scale-100.png" />
     <Content Include="Images\LargeTile.scale-125.png" />
     <Content Include="Images\LargeTile.scale-150.png" />

@@ -286,7 +286,14 @@ namespace DoubleYou.Pages
 
                 if (!string.IsNullOrEmpty(word))
                 {
-                    await m_windowsHelper.SpeakAsync(word);
+                    try
+                    {
+                        await m_windowsHelper.SpeakAsync(word);
+                    }
+                    catch (Exception ex)
+                    {
+                        ShowException(ex);
+                    }
                 }
             }
         }

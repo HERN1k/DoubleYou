@@ -24,6 +24,7 @@
 
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
@@ -41,6 +42,8 @@ using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 
 using Windows.Networking.Connectivity;
+
+using static DoubleYou.Domain.Entities.Entities;
 
 namespace DoubleYou.Pages
 {
@@ -256,7 +259,14 @@ namespace DoubleYou.Pages
 
                 if (!string.IsNullOrEmpty(word))
                 {
-                    await m_windowsHelper.SpeakAsync(word);
+                    try
+                    {
+                        await m_windowsHelper.SpeakAsync(word);
+                    }
+                    catch (Exception ex)
+                    {
+                        ShowException(ex);
+                    }
                 }
             }
         }

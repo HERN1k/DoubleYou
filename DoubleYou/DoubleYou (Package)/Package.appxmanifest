@@ -10,7 +10,7 @@
   <Identity
     Name="HERN1k.DoubleYou"
     Publisher="CN=9A7004B2-4FA4-469E-A4F3-690BC4E51C47"
-    Version="1.0.1.0" />
+    Version="1.0.2.0" />
 
   <mp:PhoneIdentity PhoneProductId="96e34d92-25f9-4667-ba6f-90fa2257213f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

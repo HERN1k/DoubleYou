@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.WinUI.Helpers" Version="8.1.240916" />
+    <PackageReference Include="CSCore" Version="1.2.1.2" />
     <PackageReference Include="GTranslatorAPI" Version="1.0.0" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
