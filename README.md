@@ -52,7 +52,7 @@ based on various themes to provide tailored word suggestions
 - **Supported languages:** `English, Ukrainian`
 - **First release date:** `12/20/2024`
 - **Approximate size:** `135.0 MB`
-- **Version:** `1.0.1.0`
+- **Version:** `1.0.2.0`
 
 ## 🤩 Show your support
 
